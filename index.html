@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bike Tire Pressure Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-text">
+      <h1>Bike Tire Pressure Calculator</h1>
+      <p>Find the recommended tire pressure based on your weight, tire width, bike type, and surface.</p>
+    </div>
+    <button id="darkModeBtn" class="dark-mode-btn" type="button">Dark Mode</button>
+  </header>
+
+  <main class="bento-card">
+    <section class="left-panel">
+      <h2>Inputs</h2>
+      <div class="bike-cards">
+        <button type="button" class="bike-card" id="bikeRoad">Road</button>
+        <button type="button" class="bike-card" id="bikeGravel">Gravel</button>
+        <button type="button" class="bike-card" id="bikeMTB">MTB</button>
+      </div>
+      <div class="slider-block">
+        <h3>Weight (kg)</h3>
+        <span id="weightValue">70</span>
+        <input type="range" id="weightSlider" min="40" max="120" value="70">
+      </div>
+      <div class="slider-block">
+        <h3>Tire width (mm)</h3>
+        <span id="widthValue">32</span>
+        <input type="range" id="widthSlider" min="23" max="60" value="32">
+      </div>
+      <div class="surface-buttons">
+        <button type="button" class="surface-btn" id="surfaceSmooth">Smooth Asphalt</button>
+        <button type="button" class="surface-btn" id="surfaceRough">Rough Road</button>
+        <button type="button" class="surface-btn" id="surfaceGravel">Gravel</button>
+        <button type="button" class="surface-btn" id="surfaceTrail">Trail</button>
+      </div>
+      <button type="button" id="calculateBtn" class="calculate-btn">Calculate Pressure</button>
+    </section>
+
+    <section class="right-panel">
+      <h2>Results</h2>
+      <div class="result-area">
+        <p>Front Tire: <span id="frontPsi">--</span> PSI</p>
+        <p>Rear Tire: <span id="rearPsi">--</span> PSI</p>
+      </div>
+      <div class="pressure-level-block">
+        <h3>Pressure level</h3>
+        <p id="pressureLevel">—</p>
+      </div>
+      <div class="warning-block">
+        <p id="warningText"></p>
+      </div>
+      <div class="tip-block">
+        <h3>Cycling tip</h3>
+        <p id="tipText">Click Calculate to see a tip.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 0 8px;
+}
+.header-text h1 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 1.75rem;
+}
+.header-text p {
+  margin: 0;
+  color: #555;
+  max-width: 480px;
+}
+
+.dark-mode-btn {
+  padding: 10px 18px;
+  border: 1px solid #A8C5DD;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.dark-mode-btn:hover {
+  background-color: #E8F2F8;
+  color: #722F37;
+}
+
+
+.bento-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px;
+  background-color: #fff;
+  border: 1px solid #A8C5DD;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.left-panel h2,
+.right-panel h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+.bike-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.bike-card {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #A8C5DD;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.bike-card:hover {
+  background-color: #E8F2F8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.bike-card.selected {
+  background-color: #722F37;
+  color: #fff;
+  border-color: #722F37;
+}
+.slider-block {
+  padding: 12px 16px;
+  background-color: #E8F2F8;
+  border: 1px solid #A8C5DD;
+  border-radius: 10px;
+}
+.slider-block h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+.slider-block span {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #722F37;
+}
+.slider-block input {
+  width: 100%;
+  margin-top: 4px;
+}
+.surface-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.surface-btn {
+  padding: 10px 14px;
+  border: 1px solid #A8C5DD;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.surface-btn:hover {
+  background-color: #E8F2F8;
+}
+.surface-btn.active {
+  background-color: #722F37;
+  color: #fff;
+  border-color: #722F37;
+}
+.calculate-btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #722F37;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+.calculate-btn:hover {
+  background-color: #8B3A42;
+  box-shadow: 0 4px 12px rgba(114, 47, 55, 0.35);
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-area {
+  padding: 20px;
+  background-color: #E8F2F8;
+  border: 1px solid #A8C5DD;
+  border-radius: 10px;
+}
+.result-area p {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+.result-area span {
+  font-weight: 700;
+  color: #722F37;
+}
+
+.pressure-level-block h3,
+.tip-block h3 {
+  margin: 0 0 6px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+.pressure-level-block p,
+.tip-block p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+#pressureLevel {
+  font-weight: 600;
+  color: #722F37;
+}
+
+
+.warning-block {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #fff5f5;
+  border: 1px solid #e0b0b0;
+}
+.warning-block p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #8B3A42;
+}
+.tip-block {
+  padding: 14px;
+  background-color: #f8fafc;
+  border: 1px solid #A8C5DD;
+  border-radius: 10px;
+}
+#tipText {
+  color: #555;
+}
+
+body.dark-mode {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+body.dark-mode .header-text h1 {
+  color: #f0f0f0;
+}
+body.dark-mode .header-text p {
+  color: #b0b0b0;
+}
+body.dark-mode .dark-mode-btn {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border-color: #555;
+}
+body.dark-mode .dark-mode-btn:hover {
+  background-color: #4a4a4a;
+  color: #f0f0f0;
+}
+body.dark-mode .bento-card {
+  background-color: #3a3a3a;
+  border-color: #555;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+body.dark-mode .left-panel h2,
+body.dark-mode .right-panel h2 {
+  color: #b0b0b0;
+}
+body.dark-mode .bike-card {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border-color: #555;
+}
+body.dark-mode .bike-card:hover {
+  background-color: #4a4a4a;
+}
+body.dark-mode .bike-card.selected {
+  background-color: #8B3A42;
+  color: #fff;
+  border-color: #8B3A42;
+}
+body.dark-mode .slider-block {
+  background-color: #2c2c2c;
+  border-color: #555;
+}
+body.dark-mode .slider-block h3 {
+  color: #b0b0b0;
+}
+body.dark-mode .slider-block span {
+  color: #d4a0a0;
+}
+body.dark-mode .surface-btn {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border-color: #555;
+}
+body.dark-mode .surface-btn:hover {
+  background-color: #4a4a4a;
+}
+body.dark-mode .surface-btn.active {
+  background-color: #8B3A42;
+  color: #fff;
+  border-color: #8B3A42;
+}
+body.dark-mode .calculate-btn {
+  background-color: #8B3A42;
+}
+body.dark-mode .calculate-btn:hover {
+  background-color: #9e4a52;
+}
+body.dark-mode .result-area {
+  background-color: #2c2c2c;
+  border-color: #555;
+}
+body.dark-mode .result-area span {
+  color: #d4a0a0;
+}
+body.dark-mode .pressure-level-block p,
+body.dark-mode #pressureLevel {
+  color: #d4a0a0;
+}
+body.dark-mode .warning-block {
+  background-color: #4a3030;
+  border-color: #6a4040;
+}
+body.dark-mode .warning-block p {
+  color: #e8a0a0;
+}
+body.dark-mode .tip-block {
+  background-color: #2c2c2c;
+  border-color: #555;
+}
+body.dark-mode #tipText {
+  color: #b0b0b0;
+}
