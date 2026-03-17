@@ -72,7 +72,7 @@ AI tools were used as a **learning aid**, while the final project structure, des
 
 1. Download or clone the project files.
 2. Open the project folder.
-3. Open `index.html` in a web browser.
+3. Open `bones_html.html` in a web browser.
 
 No installation or server setup is required.
 
